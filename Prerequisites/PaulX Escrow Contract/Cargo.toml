@@ -1,0 +1,25 @@
+[package]
+name = "sol-escrow-program"
+version = "0.1.0"
+edition = "2021"
+license = "WTFPL"
+publish = false
+
+[dependencies]
+arrayref = "0.3.6"
+solana-program = "=1.14.4"
+spl-token = { version = "3.5.0", features = ["no-entrypoint"] }
+thiserror = "1.0.38"
+
+[features]
+test-bpf = []
+
+[dev-dependencies]
+assert_matches = "1.4.0"
+solana-logger = "=1.14.4"
+solana-program-test = "=1.14.4"
+solana-sdk = "=1.14.4"
+solana-validator = "=1.14.4"
+
+[lib]
+crate-type = ["cdylib", "lib"]
